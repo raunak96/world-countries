@@ -1,0 +1,92 @@
+.header {
+	display: flex;
+	padding: 1.25rem;
+}
+
+.header button {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	outline: none;
+}
+.header_flag {
+	flex: 1;
+	margin-right: 1rem;
+}
+
+.header_name,
+.header_population,
+.header_gini,
+.header_area {
+	flex: 4;
+	color: var(--text-color-secondary);
+	font-weight: 500;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.header_name {
+	justify-content: flex-start;
+}
+
+.upArrow {
+	color: var(--primary-color);
+	transform: rotate(180deg);
+	margin-left: 2px;
+}
+.downArrow {
+	color: var(--primary-color);
+	margin-left: 2px;
+}
+
+.row {
+	display: flex;
+	padding: 1.25rem;
+	text-align: center;
+	background-color: var(--background-color-light);
+	border-radius: 8px;
+	margin-bottom: 1rem;
+	font-weight: 500;
+	box-shadow: var(--box-shadow);
+	cursor: pointer;
+
+	transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+}
+
+.row:hover {
+	transform: translateY(-4px);
+	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+}
+.name {
+	flex: 4;
+	text-align: left;
+}
+
+.population {
+	flex: 4;
+}
+.area {
+	flex: 4;
+}
+.gini {
+	flex: 4;
+}
+.flag {
+	flex: 1;
+	margin-right: 1rem;
+}
+.flag img {
+	border-radius: 2px;
+}
+
+@media screen and (max-width: 720px) {
+	.area,
+	.header_area,
+	.gini,
+	.header_gini,
+	.flag,
+	.header_flag {
+		display: none;
+	}
+}
